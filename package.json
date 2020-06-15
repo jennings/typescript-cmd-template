@@ -1,22 +1,22 @@
 {
   "name": "typescript-cmd-template",
   "version": "0.0.1",
-  "main": "index.js",
+  "bin": "./dist/index.js",
+  "main": "./src/index.ts",
   "author": "Stephen Jennings",
   "description": "A template for creating commands using TypeScript",
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode development",
-    "start": "webpack --mode development --watch"
+    "build": "tsc",
+    "prepack": "tsc",
+    "start": "tsc --watch"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-typescript": "^7.10.1",
-    "nodemon-webpack-plugin": "^4.3.2",
-    "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "@types/node": "^14.0.13",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "commander": "^5.1.0"
   }
 }

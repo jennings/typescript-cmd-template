@@ -1,7 +1,10 @@
-class Messenger {
-  show(message: string, ...args: any[]) {
-    console.log(message, ...args);
-  }
-}
+import { argv } from "process";
+import { Command } from "commander";
+import { hello } from "./hello";
+import { calc } from "./calc";
 
-new Messenger().show("It", "worked!");
+const program = new Command();
+program.addCommand(hello);
+program.addCommand(calc);
+
+program.parse(argv);
