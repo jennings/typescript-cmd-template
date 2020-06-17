@@ -6,14 +6,17 @@
   "author": "Stephen Jennings",
   "description": "A template for creating commands using TypeScript",
   "private": true,
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "tsc",
     "prepack": "tsc",
-    "start": "tsc --watch"
+    "run": "ts-node src/index.ts",
+    "start": "nodemon --exec ts-node src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^14.0.13",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   },
   "dependencies": {
