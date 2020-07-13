@@ -6,7 +6,7 @@ A template project for writing utilities with TypeScript.
 ## Usage
 
 ```
-npx degit 'jennings/scratch-typescript#main' my-cmd
+npx degit 'jennings/typescript-cmd-template#trunk' my-cmd
 ```
 
 Then edit the package.json and README.
